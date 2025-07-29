@@ -1,0 +1,30 @@
+ Copy all elements from one array to another array
+
+
+.....code......
+
+#include <stdio.h>
+
+int main() {
+    int i;
+    int original[] = {1, 2, 3, 4, 5};
+    int copied[5]; // Same size as original
+    int size = sizeof(original) / sizeof(original[0]);
+
+    // Copying elements
+    for (i = 0; i < size; i++) {
+        copied[i] = original[i];
+    }
+
+    // Output copied array
+    printf("Copied array: ");
+    for (i = 0; i < size; i++) {
+        printf("%d ", copied[i]);
+    }
+
+    return 0;
+}
+
+
+output:
+Copied array: 1 2 3 4 5
