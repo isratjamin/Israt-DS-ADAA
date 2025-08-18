@@ -1,0 +1,18 @@
+ Remove an element from a specified position in an array.
+  
+.....code....
+
+#include <stdio.h>
+
+int main() {
+    int a[100], n, p;
+    scanf("%d",&n);
+    for(int i=0;i<n;i++) scanf("%d",&a[i]);
+
+    scanf("%d",&p);       //position
+
+    for(int i=p;i<n-1;i++) a[i]=a[i+1];
+    n--;
+
+    for(int i=0;i<n;i++) printf("%d ",a[i]);
+}
