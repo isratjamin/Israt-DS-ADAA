@@ -1,0 +1,35 @@
+ Create a new array or modify the existing one to contain only unique elements from the original array.
+
+
+.....code.....
+
+#include <stdio.h>
+
+int main() {
+    int arr[] = {1, 2, 2, 3, 4, 4, 5};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    int unique[n]; 
+    int k = 0;
+
+    for (int i = 0; i < n; i++) {
+        int found = 0;
+        for (int j = 0; j < k; j++) {
+            if (arr[i] == unique[j]) {
+                found = 1;
+                break;
+            }
+        }
+        if (!found) {
+            unique[k++] = arr[i];
+        }
+    }
+
+    printf("Unique elements: ");
+    for (int i = 0; i < k; i++) {
+        printf("%d ", unique[i]);
+    }
+    return 0;
+}
+
+OUTPUT:
+Unique elements: 1 2 3 4 5
